@@ -1,3 +1,12 @@
 #contentStyle{
-  margin-top: 130px;
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+
+#cardStyle {
+  justify-content: space-around;
+  padding: auto 15px;
 }

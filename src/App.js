@@ -1,9 +1,8 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
 import Navbar from './Component/Navbar/Navbar.jsx'
-
+import NewsCard from './Component/NewsCard/NewsCard'
+import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
+import './App.css';
 
 function App() {
   return (
@@ -11,17 +10,25 @@ function App() {
       <Router>
           <Switch>
 
+             {/* Redirect users to entertainment*/ }
             <Route exact path="/"> 
               <Redirect to="/entertainment"/>
             </Route>
 
+             {/* Route for entertainment section*/ }
             <Route path="/entertainment">
-              <Navbar/>
+              <Navbar id= "navBarStyle"/>
               <div id = "contentStyle">
-                <h1>Entertainment</h1>
+                <NewsCard id={"cardStyle"}/>
+                <NewsCard id={"cardStyle"}/>
+                <NewsCard id={"cardStyle"}/>
+                <NewsCard id={"cardStyle"}/>
+                <NewsCard id={"cardStyle"}/>
               </div>
             </Route>
 
+
+             {/* Route for Sports Section */ }
             <Route path="/sports">
               <Navbar/>
               <div id = "contentStyle">
@@ -29,13 +36,13 @@ function App() {
               </div>
             </Route>
 
+             {/*Route for technology section */ }
             <Route path="/technology">
               <Navbar/>
               <div id = "contentStyle">
                 <h1>Technology</h1>
               </div>
             </Route>  
-
         </Switch>
       </Router>
     </div>
