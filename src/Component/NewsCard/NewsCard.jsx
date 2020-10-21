@@ -13,7 +13,7 @@ import CardActions from '@material-ui/core/CardActions';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 import imageUrl from './logo192.png'
-import { red } from '@material-ui/core/colors';
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,10 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
   expandOpen: {
     transform: 'rotate(180deg)',
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
+  }
 }));
 
 export default function NewsCard() {
@@ -52,51 +49,55 @@ export default function NewsCard() {
   return (
     <Card className={classes.root}>
 
-       {/* Header section */ }
-      <CardHeader
-        action={
-          <IconButton
-            className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-        }
-        title="Bitcoin Mixer Designed to Bypass Money Laundering Laws Fined $60 Million for Bypassing Money Laundering Laws"
-        subheader="September 14, 2016"
-      />
+      {/* Makes the card a clickable to expand the card */ }
+      <CardActionArea  onClick={handleExpandClick}>
 
-       {/* Image section */ }
-      <CardMedia
-        className={classes.media}
-        image={imageUrl}
-        title="Paella dish"
-      />
+        {/* Header section */ }
+        <CardHeader
+          action={
+            <IconButton
+              className={clsx(classes.expand, {
+              [classes.expandOpen]: expanded,
+            })}
+            onClick={handleExpandClick}
+            aria-expanded={expanded}
+            aria-label="show more"
+          >
+            <ExpandMoreIcon />
+          </IconButton>
+          }
+          title="Bitcoin Mixer Designed to Bypass Money Laundering Laws Fined $60 Million for Bypassing Money Laundering Laws"
+          subheader="September 14, 2016"
+        />
 
-       {/* Summary of the article section */ }
-      <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-        The Financial Crimes Enforcement Network (FinCEN) has assessed a civil penalty of $60 million from Larry Dean Harmon, the founder of “bitcoin mixers” Helix and Coin Ninja. The penalty is the first of its kind in the United States.
-        </Typography>
-      </CardContent>
+        {/* Image section */ }
+        <CardMedia
+          className={classes.media}
+          image={imageUrl}
+          title="Paella dish"
+        />
 
-      {/* Article section */ }
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        {/* Summary of the article section */ }
         <CardContent>
-          <Typography paragraph>
-            Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
-            heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
-            browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
-            and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
-            pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+          <Typography variant="body2" color="textSecondary" component="p">
+          The Financial Crimes Enforcement Network (FinCEN) has assessed a civil penalty of $60 million from Larry Dean Harmon, the founder of “bitcoin mixers” Helix and Coin Ninja. The penalty is the first of its kind in the United States.
           </Typography>
         </CardContent>
-      </Collapse>
+
+        {/* Article section */ }
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography paragraph>
+              Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high
+              heat. Add chicken, shrimp and chorizo, and cook, stirring occasionally until lightly
+              browned, 6 to 8 minutes. Transfer shrimp to a large plate and set aside, leaving chicken
+              and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, onion, salt and
+              pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add
+              saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+            </Typography>
+          </CardContent>
+        </Collapse>
+      </CardActionArea>
 
       {/* Buttons section for the card */ }
       <CardActions>

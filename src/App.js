@@ -4,6 +4,8 @@ import NewsCard from './Component/NewsCard/NewsCard'
 import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
 import './App.css';
 
+
+
 function App() {
   return (
     <div>
