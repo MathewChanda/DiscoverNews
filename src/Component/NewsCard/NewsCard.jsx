@@ -18,10 +18,11 @@ import { red } from '@material-ui/core/colors';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 450,
-    margin : 20
+    margin : 20, 
+    height: "100%"
   },
   media: {
-    height: 0,
+    height: 100,
     paddingTop: '56.25%', 
   },
   expand: {
@@ -43,7 +44,7 @@ export default function NewsCard() {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
-   {/* */ }
+   {/* Function to switch between expanding the card  */ }
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
