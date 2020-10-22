@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './Component/Navbar/Navbar.jsx'
 import NewsCard from './Component/NewsCard/NewsCard'
 import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
+import SetCards from "./Component/SetCards/SetCards"
 import './App.css';
 
 
@@ -20,30 +21,20 @@ function App() {
              {/* Route for entertainment section*/ }
             <Route path="/entertainment">
               <Navbar id= "navBarStyle"/>
-              <div id = "contentStyle">
-                <NewsCard id={"cardStyle"}/>
-                <NewsCard id={"cardStyle"}/>
-                <NewsCard id={"cardStyle"}/>
-                <NewsCard id={"cardStyle"}/>
-                <NewsCard id={"cardStyle"}/>
-              </div>
+              <SetCards category={"entertainment"}/>
             </Route>
 
 
              {/* Route for Sports Section */ }
             <Route path="/sports">
               <Navbar/>
-              <div id = "contentStyle">
-                <h1>Sports</h1>
-              </div>
+              <SetCards category={"sports"}/>
             </Route>
 
              {/*Route for technology section */ }
             <Route path="/technology">
               <Navbar/>
-              <div id = "contentStyle">
-                <h1>Technology</h1>
-              </div>
+              <SetCards category={"technology"}/>
             </Route>  
         </Switch>
       </Router>
