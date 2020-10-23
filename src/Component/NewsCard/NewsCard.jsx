@@ -20,6 +20,7 @@ import { makeStyles,withStyles} from '@material-ui/core/styles';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import EmailIcon from '@material-ui/icons/Email';
+import MissingImage from './MissingImage.png'
 
 
 // Styling for the parts within the NewsCard Components 
@@ -105,6 +106,16 @@ export default function NewsCard(props) {
     setAnchorEl(null);
   };
 
+
+  // Determining if we need to use the default pic 
+  let media = <CardMedia className={classes.media} image={MissingImage} title={props.urlToImage} />
+
+  if(props.urlToImage !== null){
+    media =  <CardMedia className={classes.media} image={props.urlToImage} title={props.urlToImage} />
+  }
+
+ 
+
   return (
     <Card className={classes.root}>
 
@@ -129,12 +140,10 @@ export default function NewsCard(props) {
           subheader={props.source}
         />
 
-        {/* Image section */ }
-        <CardMedia
-          className={classes.media}
-          image={props.urlToImage}
-          title={props.urlToImage}
-        />
+        
+
+        {media}
+
 
         {/* Date and the summary of the article section */ }
         <CardContent>
