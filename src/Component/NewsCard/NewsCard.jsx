@@ -14,7 +14,6 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 import moment from 'moment'; 
 
-
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 450,
@@ -22,8 +21,10 @@ const useStyles = makeStyles((theme) => ({
     height: "100%"
   },
   media: {
-    height: 100,
-    paddingTop: '56.25%', 
+    width: "100%",
+    height: "100%",
+    paddingTop: "56.5%",
+    objectFit : "cover"
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -34,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
   expandOpen: {
     transform: 'rotate(180deg)',
+  },
+  dateStyle :{
+    marginBottom : 10
   }
 }));
 
@@ -79,6 +83,9 @@ export default function NewsCard(props) {
 
         {/* Summary of the article section */ }
         <CardContent>
+          <Typography className={classes.dateStyle}>
+              {moment(props.date).format('ll')}
+          </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
               {props.description}
           </Typography>
@@ -87,9 +94,6 @@ export default function NewsCard(props) {
         {/* Article section */ }
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-          <Typography paragraph>
-              {moment(props.date).format('ll')}
-            </Typography>
             <Typography paragraph>
               {props.content}
             </Typography>
