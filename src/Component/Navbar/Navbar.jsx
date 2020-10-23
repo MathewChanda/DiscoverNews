@@ -8,8 +8,7 @@ import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import { Link } from 'react-router-dom';
-import './Navbar.css'
-
+import styles from './Navbar.css'
 
 function Navbar(){
     return(
@@ -23,7 +22,7 @@ function Navbar(){
                 </Typography>
             </div>
             {/* The tabs in the navbar */}
-            <Tabs id="navbarStyles" variant="fullWidth">
+            <Tabs id="navbarStyles" variant="fullWidth" classes={styles} selectionFollowsFocus={true}>
                 <Tab label="Entertainment" component={Link} to="/entertainment" icon={<LiveTvIcon id="tabIconStyle"/>}/>
                 <Tab label="Sports" component={Link} to="/sports" icon={<SportsBasketballIcon id="tabIconStyle"/>}/>
                 <Tab label="Technology" component={Link} to="/technology" icon={<ImportantDevicesIcon id="tabIconStyle"/>}/>

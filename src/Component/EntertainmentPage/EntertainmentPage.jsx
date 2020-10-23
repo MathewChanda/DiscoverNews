@@ -2,6 +2,7 @@ import React from 'react';
 import {getArticles} from '../NewsCard/Articles.js'
 import NewsCard from '../NewsCard/NewsCard.jsx';
 import { Typography } from '@material-ui/core';
+import { Redirect } from 'react-router-dom';
 import './EntertainmentPage.css'
 
 class EntertainmentPage extends React.Component{
@@ -9,7 +10,9 @@ class EntertainmentPage extends React.Component{
         super()
         this.state = {
             artictleData : [], 
-            status : ""
+            status : "", 
+            code : "", 
+            message : ""
         }
     }
 
@@ -19,15 +22,16 @@ class EntertainmentPage extends React.Component{
         getArticles("entertainment").then(
             data => {
                 let json = JSON.stringify(data)
-                this.setState({status : data["status"]})
-                this.setState({artictleData : data["articles"]})
-                console.log(this.state.artictleData)
+                this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"]})
              })
             
     }
 
     render(){
-        console.log(this.state.artictleData)
+        if(this.state.status !== "ok"){
+            return(<Redirect to={"/error"}/>)
+        }
+
         return(
             <div>
                 <div id={"headerStyling"}>

@@ -4,6 +4,7 @@ import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom';
 import SportPage from "./Component/SportPage/SportPage.jsx"
 import TechnologyPage from "./Component/TechnologyPage/TechnologyPage.jsx"
 import EntertainmentPage from "./Component/EntertainmentPage/EntertainmentPage.jsx"
+import ErrorPage from "./Component/ErrorPage/ErrorPage.jsx"
 import './App.css';
 
 
@@ -37,6 +38,14 @@ function App() {
               <Navbar/>
               <TechnologyPage/>
             </Route>  
+
+             {/*Route for error */ }
+            <Route path="/error" render={(routeProps) => 
+              <div>
+                <Navbar/> 
+                <ErrorPage {...routeProps}/>
+              </div>
+            } />
         </Switch>
       </Router>
     </div>

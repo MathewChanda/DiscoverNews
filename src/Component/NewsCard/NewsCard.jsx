@@ -110,9 +110,11 @@ export default function NewsCard(props) {
   // Determining if we need to use the default pic 
   let media = <CardMedia className={classes.media} image={MissingImage} title={props.urlToImage} />
 
-  if(props.urlToImage !== null){
+  if(props.urlToImage !== null && props.urlToImage !== ""){
     media =  <CardMedia className={classes.media} image={props.urlToImage} title={props.urlToImage} />
   }
+
+  console.log(props.url)
 
  
 
@@ -140,10 +142,10 @@ export default function NewsCard(props) {
           subheader={props.source}
         />
 
-        
-
-        {media}
-
+        {
+          // Image of the article 
+          media
+        }
 
         {/* Date and the summary of the article section */ }
         <CardContent>
