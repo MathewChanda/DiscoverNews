@@ -13,6 +13,7 @@ class SportPage extends React.Component{
         }
     }
 
+    // Gets new articles from the API 
     async componentWillMount(){
         console.log("Executed")
         getArticles("sports").then(

@@ -1,5 +1,4 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
@@ -13,7 +12,17 @@ import CardActions from '@material-ui/core/CardActions';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Button from '@material-ui/core/Button';
 import moment from 'moment'; 
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import { makeStyles,withStyles} from '@material-ui/core/styles';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import TwitterIcon from '@material-ui/icons/Twitter';
+import EmailIcon from '@material-ui/icons/Email';
 
+
+// Styling for the parts within the NewsCard Components 
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 450,
@@ -41,13 +50,59 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+
+// Styling for the menu 
+const StyledMenu = withStyles({
+  paper: {
+    border: '1px solid #d3d4d5',
+  },
+})((props) => (
+  <Menu
+    elevation={0}
+    getContentAnchorEl={null}
+    anchorOrigin={{
+      vertical: 'bottom',
+      horizontal: 'center',
+    }}
+    transformOrigin={{
+      vertical: 'top',
+      horizontal: 'center',
+    }}
+    {...props}
+  />
+));
+
+// Styling for the menu item 
+const StyledMenuItem = withStyles((theme) => ({
+  root: {
+    '&:focus': {
+      backgroundColor: "#004977",
+      '& .MuiListItemIcon-root, & .MuiListItemText-primary': {
+        color: theme.palette.common.white,
+      },
+    },
+  },
+}))(MenuItem);
+
+
 export default function NewsCard(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState(null);
 
-   {/* Function to switch between expanding the card  */ }
+  {/* Function to switch between expanding the card  */ }
   const handleExpandClick = () => {
     setExpanded(!expanded);
+  };
+
+  {/* Function to open the share menu  */ }
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  {/* Function to close the share menu  */ }
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -81,7 +136,7 @@ export default function NewsCard(props) {
           title={props.urlToImage}
         />
 
-        {/* Summary of the article section */ }
+        {/* Date and the summary of the article section */ }
         <CardContent>
           <Typography className={classes.dateStyle}>
               {moment(props.date).format('ll')}
@@ -101,14 +156,40 @@ export default function NewsCard(props) {
         </Collapse>
       </CardActionArea>
 
-      {/* Buttons section for the card */ }
+      {/* Buttons section for the card with sharing menu*/ }
       <CardActions>
-          <Button size="small">
-            Share
+          <Button size="small" onClick={handleClick}>
+            Share Article
           </Button>
           <Button size="medium" onClick={() => window.location.href = props.url}>
             Read More
           </Button>
+          <StyledMenu
+            id="customized-menu"
+            anchorEl={anchorEl}
+            keepMounted
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            <StyledMenuItem onClick={()=> window.open(`https://facebook.com/sharer/sharer.php?u=${props.url}`, "_blank")}>
+              <ListItemIcon>
+                <FacebookIcon fontSize="small" />
+              </ListItemIcon>
+              <ListItemText primary="Facebook Post"/>
+            </StyledMenuItem>
+            <StyledMenuItem onClick={()=> window.open(`https://twitter.com/intent/tweet?&text=${props.url}`, "_blank")}>
+              <ListItemIcon>
+                <TwitterIcon fontSize="small" />
+              </ListItemIcon>
+              <ListItemText primary="Tweet" />
+            </StyledMenuItem>
+            <StyledMenuItem onClick={()=> window.open(`mailto:?subject=${props.title}&body=${props.url}%20is%20the%20link!`, "_blank")}>
+              <ListItemIcon>
+                <EmailIcon fontSize="small" />
+              </ListItemIcon>
+              <ListItemText primary="Email" />
+            </StyledMenuItem>
+          </StyledMenu>
       </CardActions>
     </Card>
   );

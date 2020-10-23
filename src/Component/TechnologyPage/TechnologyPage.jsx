@@ -13,6 +13,7 @@ class TechnologyPage extends React.Component{
         }
     }
 
+     // Gets new articles from the API 
     async componentWillMount(){
         console.log("Executed")
         getArticles("technology").then(

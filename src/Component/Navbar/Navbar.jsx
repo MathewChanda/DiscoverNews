@@ -16,11 +16,13 @@ function Navbar(){
     <div>
         <AppBar style={{background:"#004977",position:"fixed"}}>
             <div id="headerStyle">
+                {/* The title of the web app */}
                 <PublicIcon id="headerIconStyle" fontSize = "large"/>
                 <Typography variant="h3" color="inherit">
                     DiscoverNews
                 </Typography>
             </div>
+            {/* The tabs in the navbar */}
             <Tabs id="navbarStyles" variant="fullWidth">
                 <Tab label="Entertainment" component={Link} to="/entertainment" icon={<LiveTvIcon id="tabIconStyle"/>}/>
                 <Tab label="Sports" component={Link} to="/sports" icon={<SportsBasketballIcon id="tabIconStyle"/>}/>
