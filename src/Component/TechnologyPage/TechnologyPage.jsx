@@ -10,13 +10,13 @@ class TechnologyPage extends React.Component{
         super()
         this.state = {
             artictleData : [], 
-            status : ""
+            status : "ok"
         }
     }
 
      // Gets new articles from the API 
     async componentWillMount(){
-        console.log("Executed")
+        
         getArticles("technology").then(
             data => {
                 let json = JSON.stringify(data)
@@ -26,9 +26,9 @@ class TechnologyPage extends React.Component{
     }
 
     render(){
-        if(this.state.status !== "ok"){
-            return(<Redirect to={"/error"}/>)
-        }
+        // if(this.state.status !== "ok"){
+        //     return(<Redirect to={"/error"}/>)
+        // }
 
         return(
             <div>
@@ -46,16 +46,16 @@ class TechnologyPage extends React.Component{
                             let date = article["publishedAt"]
                             let content = article["content"]
                             return(
-                            <NewsCard 
-                                    source={source} 
-                                    title={title} 
-                                    description={description} 
-                                    url={url} 
-                                    urlToImage={urlToImage} 
-                                    date={date} 
-                                    content={content}
-                                />)
-                        }
+                                <NewsCard 
+                                        source={source} 
+                                        title={title} 
+                                        description={description} 
+                                        url={url} 
+                                        urlToImage={urlToImage} 
+                                        date={date} 
+                                        content={content}
+                                    />)
+                         }
                     )}
                 </div>
             </div>

@@ -26,7 +26,7 @@ import MissingImage from './MissingImage.png'
 // Styling for the parts within the NewsCard Components 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 450,
+    width: 450,
     margin : 20, 
     height: "100%"
   },
@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     width: "100%",
     height: "100%",
     paddingTop: "56.5%",
-    objectFit : "cover"
+    objectFit : "contain"
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -114,9 +114,37 @@ export default function NewsCard(props) {
     media =  <CardMedia className={classes.media} image={props.urlToImage} title={props.urlToImage} />
   }
 
-  console.log(props.url)
+  let title = props.title
+  let source = props.source
+  let description = props.description
+  let content = props.content
+  let date = props.date
 
- 
+  // When API returns, nothing for title, source, description, and content moment(props.date).format('ll')
+  if(title === "" || title === null){
+    title = "Title is unavailable"
+  }
+
+  if(source === "" || source === null){
+    source = "Source is unavailable"
+  }
+
+  if(description === "" || description === null){
+    description = "Description is unavailable"
+  }
+
+  if(content === "" || content === null){
+    content = "Content is unavailable"
+  }
+
+  if(date == ""){
+    date = "Date is unavailable"
+  }
+
+  else{
+    date = moment(props.date).format('ll')
+  }
+  
 
   return (
     <Card className={classes.root}>
@@ -138,22 +166,20 @@ export default function NewsCard(props) {
             <ExpandMoreIcon />
           </IconButton>
           }
-          title={props.title}
-          subheader={props.source}
+          title={title}
+          subheader={source}
         />
 
-        {
-          // Image of the article 
-          media
-        }
+        {/*Image of the news card*/}
+        {media}
 
         {/* Date and the summary of the article section */ }
         <CardContent>
           <Typography className={classes.dateStyle}>
-              {moment(props.date).format('ll')}
+              {date}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-              {props.description}
+              {description}
           </Typography>
         </CardContent>
 
@@ -161,7 +187,7 @@ export default function NewsCard(props) {
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph>
-              {props.content}
+              {content}
             </Typography>
           </CardContent>
         </Collapse>

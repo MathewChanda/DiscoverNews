@@ -12,7 +12,7 @@ class EntertainmentPage extends React.Component{
             artictleData : [], 
             status : "", 
             code : "", 
-            message : ""
+            message : "ok"
         }
     }
 
@@ -28,9 +28,9 @@ class EntertainmentPage extends React.Component{
     }
 
     render(){
-        if(this.state.status !== "ok"){
-            return(<Redirect to={"/error"}/>)
-        }
+        // if(this.state.status !== "ok"){
+        //     return(<Redirect to={"/error"}/>)
+        // }
 
         return(
             <div>
