@@ -107,23 +107,24 @@ export default function NewsCard(props) {
   };
 
 
-  // Determining if we need to use the default pic 
+  
   let media = <CardMedia className={classes.media} image={MissingImage} title={props.urlToImage} />
-
-  if(props.urlToImage !== null && props.urlToImage !== ""){
-    media =  <CardMedia className={classes.media} image={props.urlToImage} title={props.urlToImage} />
-  }
-
   let title = props.title
   let source = props.source
   let description = props.description
   let content = props.content
   let date = props.date
+  let url = props.url
 
-  // When API returns, nothing for title, source, description, and content moment(props.date).format('ll')
+  // When API return nothing for title, source, description, date, content, pic, and url, newscard present default value
   if(title === "" || title === null){
     title = "Title is unavailable"
   }
+
+  if(props.urlToImage !== null && props.urlToImage !== ""){
+    media =  <CardMedia className={classes.media} image={props.urlToImage} title={props.urlToImage} />
+  }
+
 
   if(source === "" || source === null){
     source = "Source is unavailable"
@@ -135,6 +136,10 @@ export default function NewsCard(props) {
 
   if(content === "" || content === null){
     content = "Content is unavailable"
+  }
+
+  if(url === ""){
+    url = "missingurl"
   }
 
   if(date == ""){
@@ -198,7 +203,7 @@ export default function NewsCard(props) {
           <Button size="small" onClick={handleClick}>
             Share Article
           </Button>
-          <Button size="medium" onClick={() => window.location.href = props.url}>
+          <Button size="medium" onClick={() => window.location.href = url}>
             Read More
           </Button>
           <StyledMenu
@@ -208,19 +213,19 @@ export default function NewsCard(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
-            <StyledMenuItem onClick={()=> window.open(`https://facebook.com/sharer/sharer.php?u=${props.url}`, "_blank")}>
+            <StyledMenuItem onClick={()=> window.open(`https://facebook.com/sharer/sharer.php?u=${url}`, "_blank")}>
               <ListItemIcon>
                 <FacebookIcon fontSize="small" />
               </ListItemIcon>
               <ListItemText primary="Facebook Post"/>
             </StyledMenuItem>
-            <StyledMenuItem onClick={()=> window.open(`https://twitter.com/intent/tweet?&text=${props.url}`, "_blank")}>
+            <StyledMenuItem onClick={()=> window.open(`https://twitter.com/intent/tweet?&text=${url}`, "_blank")}>
               <ListItemIcon>
                 <TwitterIcon fontSize="small" />
               </ListItemIcon>
               <ListItemText primary="Tweet" />
             </StyledMenuItem>
-            <StyledMenuItem onClick={()=> window.open(`mailto:?subject=${props.title}&body=${props.url}%20is%20the%20link!`, "_blank")}>
+            <StyledMenuItem onClick={()=> window.open(`mailto:?subject=${title}&body=${url}%20is%20the%20link!`, "_blank")}>
               <ListItemIcon>
                 <EmailIcon fontSize="small" />
               </ListItemIcon>

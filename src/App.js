@@ -5,6 +5,7 @@ import SportPage from "./Component/SportPage/SportPage.jsx"
 import TechnologyPage from "./Component/TechnologyPage/TechnologyPage.jsx"
 import EntertainmentPage from "./Component/EntertainmentPage/EntertainmentPage.jsx"
 import ErrorPage from "./Component/ErrorPage/ErrorPage.jsx"
+import MissingURLPage from "./Component/MissingURLPage/MissingURLPage.jsx"
 import './App.css';
 
 
@@ -37,6 +38,12 @@ function App() {
             <Route path="/technology">
               <Navbar/>
               <TechnologyPage/>
+            </Route>  
+
+             {/*Route for missing url page */ }
+             <Route path="/missingurl">
+              <Navbar/>
+              <MissingURLPage/>
             </Route>  
 
              {/*Route for error */ }
