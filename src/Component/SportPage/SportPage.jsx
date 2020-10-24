@@ -3,6 +3,7 @@ import {getArticles} from '../NewsCard/Articles.js'
 import NewsCard from '../NewsCard/NewsCard.jsx';
 import { Typography } from '@material-ui/core';
 import './SportPage.css'
+import SearchBar from "material-ui-search-bar";
 import { Redirect } from 'react-router-dom';
 
 class SportPage extends React.Component{
@@ -36,6 +37,9 @@ class SportPage extends React.Component{
             <div>
                 <div id={"headerStyling"}>
                     <Typography id={"headerStyle"} color={"white"} variant={"h1"} align={'center'}>Sports</Typography>
+                </div>
+                <div id={"searchBarDiv"}>
+                    <SearchBar style={{width : 1200}}/>
                 </div>
                 <div id={"contentStyle"}> 
                     {this.state.artictleData.map(

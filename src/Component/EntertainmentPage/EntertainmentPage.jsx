@@ -4,6 +4,7 @@ import NewsCard from '../NewsCard/NewsCard.jsx';
 import { Typography } from '@material-ui/core';
 import { Redirect } from 'react-router-dom';
 import './EntertainmentPage.css'
+import SearchBar from "material-ui-search-bar";
 
 class EntertainmentPage extends React.Component{
     constructor(){
@@ -36,6 +37,9 @@ class EntertainmentPage extends React.Component{
             <div>
                 <div id={"headerStyling"}>
                     <Typography id={"headerStyle"} color={"white"} variant={"h1"} align={'center'}>Entertainment</Typography>
+                </div>
+                <div id={"searchBarDiv"}>
+                    <SearchBar style={{width : 1200}}/>
                 </div>
                 <div id={"contentStyle"}> 
                     {this.state.artictleData.map(
