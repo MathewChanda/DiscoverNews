@@ -39,7 +39,7 @@ class SportPage extends React.Component{
                     <Typography id={"headerStyle"} color={"white"} variant={"h1"} align={'center'}>Sports</Typography>
                 </div>
                 <div id={"searchBarDiv"}>
-                    <SearchBar style={{width : 1200}}/>
+                    <SearchBar style={{width : 1200, borderRadius: 25}}/>
                 </div>
                 <div id={"contentStyle"}> 
                     {this.state.artictleData.map(
