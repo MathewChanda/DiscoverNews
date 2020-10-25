@@ -14,21 +14,23 @@ class SportPage extends React.Component{
             status : "ok", 
             code : "", 
             message : "", 
-            isLoading : true
+            isLoading : false, 
+            keyword : ""
         }
 
         this.getLoading = this.getLoading.bind(this)
+        this.getCards = this.getCards.bind(this)
     }
 
-    // Gets new articles from the API 
-    async componentWillMount(){
-        console.log("Executed")
-        getArticles("sports").then(
+   // Gets new articles from the API 
+   getCards(){
+        this.setState({isLoading : true})
+        getArticles("sports",this.state.keyword).then(
             data => {
                 let json = JSON.stringify(data)
+                console.log(json)
                 this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
              })
-            
     }
 
     // Returns the loading text when we are loading news card 
@@ -42,19 +44,22 @@ class SportPage extends React.Component{
     }
 
     render(){
-        
-        if(this.state.status === "error"){
-            return(<Redirect to={{pathname: '/error', state: { code : this.state.code, message: this.state.message }}}/>)
-        }
-
+         if(this.state.status === "error"){
+             return(<Redirect to={{pathname: '/error', state: { code : this.state.code, message: this.state.message }}}/>)
+         }
 
         return(
             <div>
                 <div id={"headerStyling"}>
-                    <Typography id={"headerStyle"} color={"white"} variant={"h1"} align={'center'}>Sports</Typography>
+                    <Typography id={"titleStyle"} color={"white"} variant={"h1"} align={'center'}>Sports</Typography>
                 </div>
                 <div id={"searchBarStyle"}>
-                    <SearchBar style={{width : 1200, borderRadius: 25}}/>
+                    <SearchBar 
+                        value={this.state.keyword}
+                        onChange={(value) => this.setState({keyword : value})}
+                        onRequestSearch={this.getCards}
+                        style={{width : 1200, borderRadius: 25}}
+                    />
                 </div>
                 <div id={"loadingStyle"}>
                     {this.getLoading()}
@@ -71,6 +76,7 @@ class SportPage extends React.Component{
                             let content = article["content"]
                             return(
                             <NewsCard 
+                                    key = {key}
                                     source={source} 
                                     title={title} 
                                     description={description} 

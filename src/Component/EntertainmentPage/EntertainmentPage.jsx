@@ -6,6 +6,7 @@ import { Redirect } from 'react-router-dom';
 import './EntertainmentPage.css'
 import SearchBar from "material-ui-search-bar";
 
+
 class EntertainmentPage extends React.Component{
     constructor(){
         super()
@@ -14,15 +15,18 @@ class EntertainmentPage extends React.Component{
             status : "ok", 
             code : "", 
             message : "", 
-            isLoading : true
+            isLoading : false, 
+            keyword : ""
         }
 
         this.getLoading = this.getLoading.bind(this)
+        this.getCards = this.getCards.bind(this)
     }
 
-     // Gets new articles from the API 
-    async componentDidMount(){
-        getArticles("entertainment").then(
+   // Gets new articles from the API 
+   getCards(){
+        this.setState({isLoading : true})
+        getArticles("entertainment",this.state.keyword).then(
             data => {
                 let json = JSON.stringify(data)
                 console.log(json)
@@ -51,7 +55,12 @@ class EntertainmentPage extends React.Component{
                     <Typography id={"titleStyle"} color={"white"} variant={"h1"} align={'center'}>Entertainment</Typography>
                 </div>
                 <div id={"searchBarStyle"}>
-                    <SearchBar style={{width : 1200, borderRadius: 25}}/>
+                    <SearchBar 
+                        value={this.state.keyword}
+                        onChange={(value) => this.setState({keyword : value})}
+                        onRequestSearch={this.getCards}
+                        style={{width : 1200, borderRadius: 25}}
+                    />
                 </div>
                 <div id={"loadingStyle"}>
                     {this.getLoading()}
