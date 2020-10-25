@@ -47,10 +47,10 @@ function App() {
             </Route>  
 
              {/*Route for error */ }
-            <Route path="/error" render={(routeProps) => 
+            <Route path="/error" render={(props) => 
               <div>
                 <Navbar/> 
-                <ErrorPage {...routeProps}/>
+                <ErrorPage {...props}/>
               </div>
             } />
         </Switch>

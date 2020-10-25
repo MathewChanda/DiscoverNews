@@ -11,7 +11,9 @@ class SportPage extends React.Component{
         super()
         this.state = {
             artictleData : [], 
-            status : "ok"
+            status : "ok", 
+            code : "", 
+            message : ""
         }
     }
 
@@ -28,9 +30,9 @@ class SportPage extends React.Component{
 
     render(){
         
-        // if(this.state.status !== "ok"){
-        //     return(<Redirect to={"/error"}/>)
-        // }
+        if(this.state.status === "error"){
+            return(<Redirect to={{pathname: '/error', state: { code : this.state.code, message: this.state.message }}}/>)
+        }
 
 
         return(

@@ -11,27 +11,26 @@ class EntertainmentPage extends React.Component{
         super()
         this.state = {
             artictleData : [], 
-            status : "", 
+            status : "ok", 
             code : "", 
-            message : "ok"
+            message : ""
         }
     }
 
      // Gets new articles from the API 
-    async componentWillMount(){
-        console.log("Executed")
+    async componentDidMount(){
         getArticles("entertainment").then(
             data => {
                 let json = JSON.stringify(data)
+                console.log(json)
                 this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"]})
              })
-            
     }
 
     render(){
-        // if(this.state.status !== "ok"){
-        //     return(<Redirect to={"/error"}/>)
-        // }
+         if(this.state.status === "error"){
+             return(<Redirect to={{pathname: '/error', state: { code : this.state.code, message: this.state.message }}}/>)
+         }
 
         return(
             <div>
@@ -53,6 +52,7 @@ class EntertainmentPage extends React.Component{
                             let content = article["content"]
                             return(
                             <NewsCard 
+                                    key = {key}
                                     source={source} 
                                     title={title} 
                                     description={description} 
