@@ -13,8 +13,11 @@ class EntertainmentPage extends React.Component{
             artictleData : [], 
             status : "ok", 
             code : "", 
-            message : ""
+            message : "", 
+            isLoading : true
         }
+
+        this.getLoading = this.getLoading.bind(this)
     }
 
      // Gets new articles from the API 
@@ -23,8 +26,18 @@ class EntertainmentPage extends React.Component{
             data => {
                 let json = JSON.stringify(data)
                 console.log(json)
-                this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"]})
+                this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
              })
+    }
+
+    // Returns the loading text when we are loading news card 
+    getLoading(){
+        if(this.state.isLoading){
+            return( 
+                <Typography variant="h3" color={'primary'} component="h3" align="center">
+                    Loading.......
+                </Typography>)
+        }
     }
 
     render(){
@@ -35,10 +48,13 @@ class EntertainmentPage extends React.Component{
         return(
             <div>
                 <div id={"headerStyling"}>
-                    <Typography id={"headerStyle"} color={"white"} variant={"h1"} align={'center'}>Entertainment</Typography>
+                    <Typography id={"titleStyle"} color={"white"} variant={"h1"} align={'center'}>Entertainment</Typography>
                 </div>
-                <div id={"searchBarDiv"}>
+                <div id={"searchBarStyle"}>
                     <SearchBar style={{width : 1200, borderRadius: 25}}/>
+                </div>
+                <div id={"loadingStyle"}>
+                    {this.getLoading()}
                 </div>
                 <div id={"contentStyle"}> 
                     {this.state.artictleData.map(
