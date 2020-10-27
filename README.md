@@ -14,8 +14,11 @@ Capital One Software Engineering Summit is a week-long undergradute program for 
 ## Technology Stack and Components 
 #### [React](https://reactjs.org/ "React") 
 * I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
-#### * [Material-UI](https://material-ui.com/ "Material-UI")
-#### * [News API](https://newsapi.org/ "News API Documentation") 
-#### * [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
-  
+#### [Material-UI](https://material-ui.com/ "Material-UI") and [Material-UI UI/UX Guide](https://material.io/design "Material-UI Design UI/UX Guide"]
+* I incorporated many Material UI components in many aspects of DiscoverNews such as Tabs, Card, and Icons to present a user-friendly format that provides concise information about the news article. 
+* In addition, I have followed and implemented the Material-UI designs choices from their documentation to build an amazing user experience!
+#### [News API](https://newsapi.org/ "News API Documentation") 
+*  I used News API, a simple and easy-to-use API that returns JSON metadata for headlines and articles live all over the web right now.
+#### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
+* Finally, I used this Material-UI Searchbar from GitHub to create the searchbar for our users to search for articles on DiscoverNews 
 </p>
