@@ -45,7 +45,7 @@ Although I had a bit experience using React, I was not familar with any concepts
 
 ## Future Features of DiscoverNews 
 In the next iteration of DiscoverNews, I would like to implement many exciting features to improve the experience of finding new articles around the world : 
-* Firebase for user authentication with Google sign-in 
+* Using Firebase for user authentication with Google sign-in 
 * Bookmarking favorite articles 
 * User history of viewing different articles 
 * Build a cross-platform mobile application with React Native or Flutter 
