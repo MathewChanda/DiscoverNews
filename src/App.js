@@ -1,11 +1,9 @@
 import React from 'react';
 import Navbar from './Component/Navbar/Navbar.jsx'
-import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
-import SportPage from "./Component/SportPage/SportPage.jsx"
-import TechnologyPage from "./Component/TechnologyPage/TechnologyPage.jsx"
-import EntertainmentPage from "./Component/EntertainmentPage/EntertainmentPage.jsx"
 import ErrorPage from "./Component/ErrorPage/ErrorPage.jsx"
 import MissingURLPage from "./Component/MissingURLPage/MissingURLPage.jsx"
+import ContentPage from './Component/ContentPage/ContentPage.jsx';
+import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
 import './App.css';
 
 
@@ -24,20 +22,20 @@ function App() {
              {/* Route for entertainment section*/ }
             <Route path="/entertainment">
               <Navbar id= "navBarStyle"/>
-              <EntertainmentPage/>
+              <ContentPage category={"Entertainment"}/>
             </Route>
 
 
              {/* Route for Sports Section */ }
             <Route path="/sports">
               <Navbar/>
-              <SportPage/>
+              <ContentPage category={"Sports"}/>
             </Route>
 
              {/*Route for technology section */ }
             <Route path="/technology">
               <Navbar/>
-              <TechnologyPage/>
+              <ContentPage category={"Technology"}/>
             </Route>  
 
              {/*Route for missing url page */ }
@@ -46,7 +44,13 @@ function App() {
               <MissingURLPage/>
             </Route>  
 
-             {/*Route for error */ }
+            {/*Route for missing url page */ }
+            <Route path="/content">
+              <Navbar/>
+              <ContentPage category={"Sports"}/>
+            </Route>  
+
+            {/*Route for error */ }
             <Route path="/error" render={(props) => 
               <div>
                 <Navbar/> 

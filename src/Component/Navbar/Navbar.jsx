@@ -7,8 +7,8 @@ import PublicIcon from '@material-ui/icons/Public'
 import SportsBasketballIcon from '@material-ui/icons/SportsBasketball';
 import LiveTvIcon from '@material-ui/icons/LiveTv';
 import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
-import { Link } from 'react-router-dom';
 import styles from './Navbar.css'
+import { Link } from 'react-router-dom';
 
 function Navbar(){
     return(
