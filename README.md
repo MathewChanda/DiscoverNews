@@ -33,5 +33,6 @@ In the next iteration of DiscoverNews, I would like to implement many exciting f
 * Firebase for user authentication with Google Sign-in 
 * Bookmarking favorite articles 
 * User History of viewing different articles 
+* Build a Mobile Application with React Native or Flutter 
     
 </p>
