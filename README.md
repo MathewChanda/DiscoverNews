@@ -13,6 +13,15 @@ I would like to attend Capital One Software Engineering Summit to learn more abo
 ## What is DiscoverNews?
 DiscoverNews is an React app created for the Capital One Software Engineering Summit 2020 that finds articles from three categories (Entertainment, Sports, and     Technology). The web application uses the [News API](https://newsapi.org/ "News API Documentation") to fetch information about the articles.  All of the information about the article is presented to a user in a material-ui card, which provides brief, important information about the article. In addition, each card is able to share the link of the article through Facebook, Twitter, or Email to other users. 
 
+## Features 
+
+<p align="center">
+ <img src="http://g.recordit.co/hDbukzGNby.gif" width="800">
+ <br>
+ <em>Searching for Articles</em>
+</p>
+
+
 ## What I used to build DiscoverNews! 
 #### [React](https://reactjs.org/ "React") 
 * I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
