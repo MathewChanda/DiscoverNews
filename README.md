@@ -10,10 +10,10 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 ## What is Capital One Software Engineering Summit? 
 Capital One Software Engineering Summit is a week-long undergradute program for freshman and sophomores that are interested to learn more about Capital One's startup-minded and innovative culture while expanding and exploring technology and problem-solving skills valued by today’s top employers. To learn more about Capital One Software Engineering Summit, [click here](https://campus.capitalone.com/summits/ "Capital One SES")! 
 
-## Why I wish to attend Capital One Software Engineering Summit
+## Why I wish to attend Capital One Software Engineering Summit?
 I would like to attend Capital One Software Engineering Summit to learn more about how Capital One's culture aligns with my career and personal goals. In addition, I would also like to meet and network with other peers who have a similar vision and goals to me while particpating and improving my technical skillsets at Capital One Software Engineering Summit's Hackathon. Finally, Capital One Software Engineering Summit will allow me to find what I'm truly interested within the technology industry. 
 
-## Technology Stack and Components 
+## What I used to build DiscoverNews! 
 #### [React](https://reactjs.org/ "React") 
 * I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
 #### [Material-UI](https://material-ui.com/ "Material-UI") and [Material-UI UI/UX Guide](https://material.io/design "Material-UI Design UI/UX Guide")
