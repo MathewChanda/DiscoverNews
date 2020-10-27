@@ -14,7 +14,7 @@ Capital One Software Engineering Summit is a week-long undergradute program for 
 ## Technology Stack and Components 
 #### [React](https://reactjs.org/ "React") 
 * I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
-#### [Material-UI](https://material-ui.com/ "Material-UI") and [Material-UI UI/UX Guide](https://material.io/design "Material-UI Design UI/UX Guide"]
+#### [Material-UI](https://material-ui.com/ "Material-UI") and [Material-UI UI/UX Guide](https://material.io/design "Material-UI Design UI/UX Guide")
 * I incorporated many Material UI components in many aspects of DiscoverNews such as Tabs, Card, and Icons to present a user-friendly format that provides concise information about the news article. 
 * In addition, I have followed and implemented the Material-UI designs choices from their documentation to build an amazing user experience!
 #### [News API](https://newsapi.org/ "News API Documentation") 
