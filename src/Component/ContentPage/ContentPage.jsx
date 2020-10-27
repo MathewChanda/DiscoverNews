@@ -44,39 +44,46 @@ class ContentPage extends React.Component{
 
    // Gets new articles from the API and mount the new newscard into the contentStyle div 
    async getCards(){
-        this.setState({isLoading : true,artictleData : []})
-        getArticles(this.state.category,this.state.keyword).then(
-            data => {
-                    this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
-                    if(Object.keys(this.state.artictleData).length === 0){
-                        let noResult = <Typography variant="h3" color={'primary'} component="h3" align="center"> No Result </Typography>
-                        ReactDOM.render(noResult, document.getElementById('contentStyle'));
-                    }
-            
-                    else{
-                        let result = this.state.artictleData.map(
-                            (article,key) => {  
-                                let source = article["source"]["name"]
-                                let title = article["title"]
-                                let description = article["description"]
-                                let url = article["url"]
-                                let urlToImage = article["urlToImage"]
-                                let date = article["publishedAt"]
-                                let content = article["content"]
-                                return(<NewsCard 
-                                        key = {key}
-                                        source={source} 
-                                        title={title} 
-                                        description={description} 
-                                        url={url} 
-                                        urlToImage={urlToImage} 
-                                        date={date} 
-                                        content={content}
-                                    />)
-                            })
-                        ReactDOM.render(result, document.getElementById('contentStyle'));
-                    }
-             })
+        if(this.state.keyword === ""){
+            alert("Please type a keyword in the searchbar")
+        }
+
+
+        else{
+            this.setState({isLoading : true,artictleData : []})
+            getArticles(this.state.category,this.state.keyword).then(
+                data => {
+                        this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
+                        if(Object.keys(this.state.artictleData).length === 0){
+                            let noResult = <Typography variant="h3" color={'primary'} component="h3" align="center"> No Result </Typography>
+                            ReactDOM.render(noResult, document.getElementById('contentStyle'));
+                        }
+                
+                        else{
+                            let result = this.state.artictleData.map(
+                                (article,key) => {  
+                                    let source = article["source"]["name"]
+                                    let title = article["title"]
+                                    let description = article["description"]
+                                    let url = article["url"]
+                                    let urlToImage = article["urlToImage"]
+                                    let date = article["publishedAt"]
+                                    let content = article["content"]
+                                    return(<NewsCard 
+                                            key = {key}
+                                            source={source} 
+                                            title={title} 
+                                            description={description} 
+                                            url={url} 
+                                            urlToImage={urlToImage} 
+                                            date={date} 
+                                            content={content}
+                                        />)
+                                })
+                            ReactDOM.render(result, document.getElementById('contentStyle'));
+                        }
+                 })
+        }
     }
 
     // Returns the loading text when we are loading news card 
