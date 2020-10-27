@@ -25,7 +25,6 @@ function App() {
               <ContentPage category={"Entertainment"}/>
             </Route>
 
-
              {/* Route for Sports Section */ }
             <Route path="/sports">
               <Navbar/>
@@ -42,12 +41,6 @@ function App() {
              <Route path="/missingurl">
               <Navbar/>
               <MissingURLPage/>
-            </Route>  
-
-            {/*Route for missing url page */ }
-            <Route path="/content">
-              <Navbar/>
-              <ContentPage category={"Sports"}/>
             </Route>  
 
             {/*Route for error */ }
