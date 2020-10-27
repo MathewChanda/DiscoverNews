@@ -13,7 +13,7 @@ Capital One Software Engineering Summit is a week-long undergradute program for 
 
 ## Technology Stack and Components 
 #### [React](https://reactjs.org/ "React") 
-     * I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
+* I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
 #### * [Material-UI](https://material-ui.com/ "Material-UI")
 #### * [News API](https://newsapi.org/ "News API Documentation") 
 #### * [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
