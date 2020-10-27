@@ -12,9 +12,10 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 Capital One Software Engineering Summit is a week-long undergradute program for freshman and sophomores that are interested to learn more about Capital One's startup-minded and innovative culture while expanding and exploring technology and problem-solving skills valued by today’s top employers. To learn more about Capital One Software Engineering Summit, [click here](https://campus.capitalone.com/summits/ "Capital One SES")! 
 
 ## Technology Stack and Components 
-#### [React](https://reactjs.org/ "React")
-#### [Material-UI](https://material-ui.com/ "Material-UI")
-#### [News API](https://newsapi.org/ "News API Documentation") 
-#### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
+#### [React](https://reactjs.org/ "React") 
+     * I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
+#### * [Material-UI](https://material-ui.com/ "Material-UI")
+#### * [News API](https://newsapi.org/ "News API Documentation") 
+#### * [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
   
 </p>
