@@ -23,7 +23,7 @@ I would like to attend Capital One Software Engineering Summit to learn more abo
 *  I used News API, a simple and easy-to-use API that returns JSON metadata for headlines and articles live all over the web right now.
 *  DiscoverNews sends HTTP Requests and recieves HTTP Response from the News API.
 #### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
-* Finally, I used this Material-UI Searchbar from GitHub to create the searchbar for our users to search for articles on DiscoverNews 
+* Finally, I used this Material-UI Searchbar from a GitHub repo to create the searchbar for our users to search for articles on DiscoverNews 
 
 ## What did I learn from building DiscoverNews 
 Although I had a bit experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React Components in the correct place to build a better user-experience! Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
