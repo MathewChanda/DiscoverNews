@@ -30,8 +30,8 @@ Although I had a bit experience using React, I was not familar with any concepts
 
 ### Future Features of DiscoverNews 
 I would like to apply many exciting features to improve finding new articles around the world : 
-    * Firebase for user authentication with Google Sign-in 
-    * Bookmarking favorite articles 
-    * User History of viewing different articles 
+* Firebase for user authentication with Google Sign-in 
+* Bookmarking favorite articles 
+* User History of viewing different articles 
     
 </p>
