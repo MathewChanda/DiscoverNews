@@ -11,7 +11,7 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 Capital One Software Engineering Summit is a week-long undergradute program for freshman and sophomores that are interested to learn more about Capital One's startup-minded and innovative culture while expanding and exploring technology and problem-solving skills valued by today’s top employers. To learn more about Capital One Software Engineering Summit, [click here](https://campus.capitalone.com/summits/ "Capital One SES")! 
 
 ## Why I wish to attend Capital One Software Engineering Summit?
-I would like to attend Capital One Software Engineering Summit to learn more about how Capital One's culture aligns with my career and personal goals. In addition, I would also like to meet and network with other peers who have a similar vision and goals to me while particpating and improving my technical skillsets at Capital One Software Engineering Summit's Hackathon. Finally, Capital One Software Engineering Summit will allow me to find what I'm truly interested within the technology industry. 
+I would like to attend Capital One Software Engineering Summit to learn more about how Capital One's culture aligns with my career and personal goals. In addition, I would also like to meet and network with other peers who have a similar vision and goals to me while particpating and improving our technical skillsets at Capital One Software Engineering Summit's Hackathon. Finally, Capital One Software Engineering Summit will allow me to find what I'm truly interested within the technology industry. 
 
 ## What I used to build DiscoverNews! 
 #### [React](https://reactjs.org/ "React") 
@@ -27,4 +27,11 @@ I would like to attend Capital One Software Engineering Summit to learn more abo
 
 #### What did I learn from building DiscoverNews 
 Although I had a bit experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React Components in the correct place to build a better user-experience! Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
+
+### Future Features of DiscoverNews 
+I would like to apply many exciting features to improve finding new articles around the world : 
+    * Firebase for user authentication with Google Sign-in 
+    * Bookmarking favorite articles 
+    * User History of viewing different articles 
+    
 </p>
