@@ -29,7 +29,7 @@ I would like to attend Capital One Software Engineering Summit to learn more abo
 Although I had a bit experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React Components in the correct place to build a better user-experience! Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
 
 ## Future Features of DiscoverNews 
-I would like to apply many exciting features to improve finding new articles around the world : 
+In the next iteration of DiscoverNews, I would like to implement many exciting features to improve the experience of finding new articles around the world : 
 * Firebase for user authentication with Google Sign-in 
 * Bookmarking favorite articles 
 * User History of viewing different articles 
