@@ -142,7 +142,7 @@ export default function NewsCard(props) {
     url = "missingurl"
   }
 
-  if(date == ""){
+  if(date === ""){
     date = "Date is unavailable"
   }
 
