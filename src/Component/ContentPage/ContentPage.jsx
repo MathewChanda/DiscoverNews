@@ -19,8 +19,7 @@ class ContentPage extends React.Component{
             message : "", 
             isLoading : false, 
             keyword : "",
-            category: props.category
-
+            category: props.category, 
         }
 
         this.getLoading = this.getLoading.bind(this)
@@ -36,8 +35,7 @@ class ContentPage extends React.Component{
             message : "", 
             isLoading : false, 
             keyword : "",
-            category: props.category
-
+            category: props.category, 
         })
         ReactDOM.render(null, document.getElementById('contentStyle'));
     }
@@ -47,7 +45,6 @@ class ContentPage extends React.Component{
         if(this.state.keyword === ""){
             alert("Please type a keyword in the searchbar")
         }
-
 
         else{
             this.setState({isLoading : true,artictleData : []})

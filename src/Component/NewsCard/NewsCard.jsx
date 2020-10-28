@@ -203,7 +203,7 @@ export default function NewsCard(props) {
           <Button size="small" onClick={handleClick}>
             Share Article
           </Button>
-          <Button size="medium" onClick={() => window.location.href = url}>
+          <Button size="medium" onClick={()=> window.open(url, "_blank")}>
             Read More
           </Button>
           <StyledMenu
