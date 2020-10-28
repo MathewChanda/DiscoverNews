@@ -16,7 +16,7 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 ## Features 
 
 <p align="center">
- <img src="http://g.recordit.co/L4vcdo4Vqp.gif" width="800">
+ <img src="http://g.recordit.co/sTa6RP8lhW.gif" width="800">
  <br>
  <em>Searching for Articles</em>
 </p>
