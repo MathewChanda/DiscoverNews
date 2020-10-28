@@ -38,7 +38,7 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 *  I used News API, a simple and easy-to-use API that returns JSON metadata for headlines and articles live all over the web right now.
 *  DiscoverNews sends HTTP Requests and recieves HTTP Response from the News API.
 #### [Heroku](https://www.heroku.com/, "Heroku")
-* I deployed our application front-end of DiscoverNews using a Heroku web dyno.
+* I deployed my application front-end of DiscoverNews using a Heroku web dyno.
 #### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
 * Finally, I used this Material-UI Searchbar from a GitHub repo to create the searchbar for our users to search for articles on DiscoverNews 
 
