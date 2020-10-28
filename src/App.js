@@ -5,6 +5,7 @@ import MissingURLPage from "./Component/MissingURLPage/MissingURLPage.jsx"
 import ContentPage from './Component/ContentPage/ContentPage.jsx';
 import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
 import './App.css';
+import NoPageFound from './Component/NoPageFound/NoPageFound.jsx';
 
 
 
@@ -41,6 +42,12 @@ function App() {
              <Route path="/missingurl">
               <Navbar/>
               <MissingURLPage/>
+            </Route>  
+
+            {/*Route for no page found */ }
+            <Route path="*">
+              <Navbar/>
+              <NoPageFound/>
             </Route>  
 
             {/*Route for error */ }
