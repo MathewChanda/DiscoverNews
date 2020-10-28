@@ -1,4 +1,4 @@
-# DiscoverNews - ### Discover exciting articles on the internet!
+# DiscoverNews
 <p align="center">
     <img src="https://cdn.lensa.com/img/company-logos/bdc1584d250ab1a65f2b4b4a78f2c7ac" width="150">
   </a>
