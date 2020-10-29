@@ -13,7 +13,11 @@ I would like to attend Capital One Software Engineering Summit to learn more abo
 ## What is DiscoverNews?
 DiscoverNews is an React app created for the Capital One Software Engineering Summit 2020 that finds articles from three categories (Entertainment, Sports, and     Technology). The web application uses the [News API](https://newsapi.org/ "News API Documentation") to fetch information about the articles.  All of the information about the article is presented to a user in a material-ui card, which provides brief, important information about the article. In addition, each card is able to share the link of the article through Facebook, Twitter, or Email to other users. 
 
-## Features 
+## Checkout DiscoverNews!
+You can view DiscoverNews in the browser at https://discover-news-mathew.herokuapp.com/ or locally on port 3000 by using the following command. 
+### `npm start`
+
+## Features of DiscoverNews
 
 <p align="center">
  <img src="http://g.recordit.co/sTa6RP8lhW.gif" width="800">
@@ -28,7 +32,7 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 </p>
 
 
-## What I used to build DiscoverNews! 
+## What did I used to build DiscoverNews?
 #### [React](https://reactjs.org/ "React") 
 * I utilized many prevalent concepts found in professional React development, including a modular component design, ReactDOM, ReactRouter, HTTP requests, hooks, and routes.
 #### [Material-UI](https://material-ui.com/ "Material-UI") and [Material-UI UI/UX Guide](https://material.io/design "Material-UI Design UI/UX Guide")
@@ -38,13 +42,12 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 *  I used News API, a simple and easy-to-use API that returns JSON metadata for headlines and articles live all over the web right now.
 *  DiscoverNews sends HTTP Requests and recieves HTTP Response from the News API.
 #### [Heroku](https://www.heroku.com/, "Heroku")
-* I deployed our application front-end of DiscoverNews using a Heroku web dyno.
+* I deployed DiscoverNews by using a Heroku web dyno.
 #### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
 * Finally, I used this Material-UI Searchbar from a GitHub repo to create the searchbar for our users to search for articles on DiscoverNews 
 
-
-## What did I learn from building DiscoverNews 
-Although I had a bit experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React components in the correct place to build a better user-experience from the design documentation! Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
+## What did I learn from building DiscoverNews?
+Although I had a bit experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React components in the correct place to build a better user-experience from the design documentation! In addition, I also learned how to deploy an application on React. Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
 
 ## Future Features of DiscoverNews 
 In the next iteration of DiscoverNews, I would like to implement many exciting features to improve the experience of finding new articles around the world : 
