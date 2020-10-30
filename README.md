@@ -17,6 +17,7 @@ DiscoverNews is an React app created for the Capital One Software Engineering Su
 You can view DiscoverNews in the browser at https://discover-news-mathew.herokuapp.com/ or locally on port 3000 by using the following command. 
 ### `npm start`
 
+
 ## Features of DiscoverNews
 
 <p align="center">
@@ -30,6 +31,8 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
  <br>
  <em>Sharing an Article through Facebook, Twitter, or Email</em>
 </p>
+
+
 
 
 ## What did I used to build DiscoverNews?
@@ -46,6 +49,17 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
 #### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
 * Finally, I used this Material-UI Searchbar from a GitHub repo to create the searchbar for our users to search for articles on DiscoverNews 
 
+### Missing Content in the News card 
+In the response from the News API, some information may not appear for the card such as source of the article and summary. To handle these event of missing content from the News API, the user will see the following messages or events below. 
+* Title of the Article - "Title is unavailable"
+* Picture of the article - [Default Picture](https://github.com/MathewChanda/DiscoverNews/blob/master/src/Component/NewsCard/MissingImage.png, "Default Picture") 
+* Source of the article - "Source is unavailable"
+* Description of the article - "Description is unavailable" 
+* Content of the article - "Content is unavailable"
+* Date of the article - "Date is unavailable"
+* Missing URL - Redirect the user to [this link](https://discover-news-mathew.herokuapp.com/missingurl, "Missing URL link") 
+
+
 ## What did I learn from building DiscoverNews?
 Although I had a bit experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React components in the correct place to build a better user-experience from the design documentation! In addition, I also learned how to deploy an application on React. Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
 
@@ -55,5 +69,6 @@ In the next iteration of DiscoverNews, I would like to implement many exciting f
 * Bookmarking favorite articles 
 * User history of viewing different articles 
 * Build a cross-platform mobile application with React Native or Flutter 
+
     
 </p>
