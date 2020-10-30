@@ -57,7 +57,7 @@ In the response from the News API, some information may not appear for the card 
 * Description of the article - "Description is unavailable" 
 * Content of the article - "Content is unavailable"
 * Date of the article - "Date is unavailable"
-* Missing URL - Redirect the user to this [link](https://discover-news-mathew.herokuapp.com/missingurl, "Missing URL link") 
+* Missing URL - Redirect the user to this [link](https://discover-news-mathew.herokuapp.com/missingurl , "Missing URL link") 
 
 
 ## What did I learn from building DiscoverNews?
