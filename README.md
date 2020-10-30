@@ -14,9 +14,7 @@ I would like to attend Capital One Software Engineering Summit to learn more abo
 DiscoverNews is an React app created for the Capital One Software Engineering Summit 2020 that finds articles from three categories (Entertainment, Sports, and     Technology). The web application uses the [News API](https://newsapi.org/ "News API Documentation") to fetch information about the articles.  All of the information about the article is presented to a user in a material-ui card, which provides brief, important information about the article. In addition, each card is able to share the link of the article through Facebook, Twitter, or Email to other users. 
 
 ## Checkout DiscoverNews!
-You can view DiscoverNews in the browser at https://discover-news-mathew.herokuapp.com/ or locally on port 3000 by using the following command. 
-### `npm start`
-
+You can view DiscoverNews in the browser at https://discover-news-mathew.herokuapp.com/ 
 
 ## Features of DiscoverNews
 
@@ -31,9 +29,6 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
  <br>
  <em>Sharing an Article through Facebook, Twitter, or Email</em>
 </p>
-
-
-
 
 ## What did I used to build DiscoverNews?
 #### [React](https://reactjs.org/ "React") 
@@ -57,8 +52,7 @@ In the response from the News API, some information may not appear for the card 
 * Description of the article - "Description is unavailable" 
 * Content of the article - "Content is unavailable"
 * Date of the article - "Date is unavailable"
-* Missing URL - Redirect the user to this [link](https://discover-news-mathew.herokuapp.com/missingurl, "Missing URL link") 
-
+* Missing URL - Redirect the user to https://discover-news-mathew.herokuapp.com/missingurl
 
 ## What did I learn from building DiscoverNews?
 Although I had a bit experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React components in the correct place to build a better user-experience from the design documentation! In addition, I also learned how to deploy an application on React. Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
