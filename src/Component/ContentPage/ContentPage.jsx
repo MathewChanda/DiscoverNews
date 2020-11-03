@@ -8,6 +8,12 @@ import {getArticles} from '../NewsCard/Articles.js'
 import {Redirect} from 'react-router-dom';
 import './ContentPage.css'
 
+/*
+    The following component is used by each categories. 
+    It presents the main content of the web application with 
+    a search bar and presenting news card when searching for 
+    a particular keyword 
+*/ 
 
 class ContentPage extends React.Component{
     constructor(props){
@@ -42,10 +48,14 @@ class ContentPage extends React.Component{
 
    // Gets new articles from the API and mount the new newscard into the contentStyle div 
    async getCards(){
+       
+        // When the user tries to enter an empty search into the searchbar 
         if(this.state.keyword === ""){
             alert("Please type a keyword in the searchbar")
         }
-
+       
+       
+        // Parse the article data if available. Else, we return a text saying "No Result" 
         else{
             this.setState({isLoading : true,artictleData : []})
             getArticles(this.state.category,this.state.keyword).then(
