@@ -1,4 +1,4 @@
-#contentStyle{
+ #contentStyle{
     margin-top: 150px;
     display: flex;
     flex-wrap: wrap;
@@ -11,9 +11,9 @@
   }
   
   #headerStyling{
-  margin-top: 150px;
-  color: white;
-  font-weight: bold !important;
+     margin-top: 150px;
+     color: white;
+     font-weight: bold !important;
   }
   
   #searchBarStyle{
