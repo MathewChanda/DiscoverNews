@@ -217,18 +217,23 @@ export default function NewsCard(props) {
             open={Boolean(anchorEl)}
             onClose={handleClose}
           >
+            {/* Sharing the article on a Facebook post*/ }
             <StyledMenuItem onClick={()=> window.open(`https://facebook.com/sharer/sharer.php?u=${url}`, "_blank")}>
               <ListItemIcon>
                 <FacebookIcon fontSize="small" />
               </ListItemIcon>
               <ListItemText primary="Facebook Post"/>
             </StyledMenuItem>
+            
+            {/* Sharing the article on a Tweet*/ }
             <StyledMenuItem onClick={()=> window.open(`https://twitter.com/intent/tweet?&text=${url}`, "_blank")}>
               <ListItemIcon>
                 <TwitterIcon fontSize="small" />
               </ListItemIcon>
               <ListItemText primary="Tweet" />
             </StyledMenuItem>
+            
+            {/* Sharing the article on a Email post*/}
             <StyledMenuItem onClick={()=> window.open(`mailto:?subject=${title}&body=${url}%20is%20the%20link!`, "_blank")}>
               <ListItemIcon>
                 <EmailIcon fontSize="small" />
