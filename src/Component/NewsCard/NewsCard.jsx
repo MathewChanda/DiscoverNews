@@ -22,6 +22,10 @@ import EmailIcon from '@material-ui/icons/Email';
 import MissingImage from './MissingImage.png'
 import { makeStyles,withStyles} from '@material-ui/core/styles';
 
+/* 
+  Newscard presents the article data in a material UI, which can share the article link 
+  in different social media platforms! 
+*/ 
 
 // Styling for the parts within the NewsCard Components 
 const useStyles = makeStyles((theme) => ({
