@@ -10,17 +10,13 @@
     margin-right: 15px;
 }
 
-#navbarStyles{
+#navbarStyle{
     position: sticky;
 }
 
 #tabIconStyle{
     font-size : 40px; 
     margin-right: 15px;
-}
-
-#navBarStyle{
-    margin-bottom: 30px;
 }
 
 .MuiTab-wrapper {

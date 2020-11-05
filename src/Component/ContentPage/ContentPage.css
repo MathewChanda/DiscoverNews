@@ -1,5 +1,5 @@
-#contentStyle{
-    margin-top: 150px;
+ #contentStyle{
+    margin-top: 70px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -10,7 +10,7 @@
     padding: auto 15px;
   }
   
-  #headerStyling{
+  #categoryStyle{
   margin-top: 150px;
   color: white;
   font-weight: bold !important;

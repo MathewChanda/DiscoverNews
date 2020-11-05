@@ -102,7 +102,7 @@ class ContentPage extends React.Component{
         return(
             <div>
                 {/* Title of the page */}
-                <div id={"headerStyling"}>
+                <div id={"categoryStyle"}>
                     <Typography id={"titleStyle"} color={"white"} variant={"h1"} align={'center'}>{this.state.category}</Typography>
                 </div>
 
