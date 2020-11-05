@@ -4,10 +4,11 @@ import ErrorPage from "./Component/ErrorPage/ErrorPage.jsx"
 import MissingURLPage from "./Component/MissingURLPage/MissingURLPage.jsx"
 import ContentPage from './Component/ContentPage/ContentPage.jsx';
 import {Switch,Route,BrowserRouter as Router,Redirect} from 'react-router-dom'; 
-import './App.css';
 import NoPageFound from './Component/NoPageFound/NoPageFound.jsx';
 
-
+/* 
+  Component that contains the routes to the correct page of the DiscoverNews
+*/ 
 
 function App() {
   return (

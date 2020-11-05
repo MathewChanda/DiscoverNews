@@ -2,6 +2,10 @@ import React from 'react'
 import { Typography } from '@material-ui/core';
 import './ErrorPage.css'
 
+/* 
+    Page for error handling when a response is bad! 
+*/ 
+
 function ErrorPage(props){
     return(
         <div id={"divStyle"}>

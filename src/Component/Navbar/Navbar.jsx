@@ -10,12 +10,16 @@ import ImportantDevicesIcon from '@material-ui/icons/ImportantDevices';
 import styles from './Navbar.css'
 import { Link } from 'react-router-dom';
 
+/* 
+    The Navigation Bar for redirecting the user to a certain category!
+*/ 
+
 function Navbar(){
     return(
     <div>
         <AppBar style={{background:"#004977",position:"fixed"}}>
+            {/* The title of the web app*/}
             <div id="headerStyle">
-                {/* The title of the web app */}
                 <PublicIcon id="headerIconStyle" fontSize = "large"/>
                 <Typography variant="h3" color="inherit">
                     DiscoverNews

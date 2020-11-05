@@ -2,6 +2,10 @@ import React from 'react'
 import { Typography } from '@material-ui/core';
 import './MissingURLPage.css'
 
+/* 
+    A page where the URL link does not exists for a particular news card
+*/ 
+
 function MissingURLPage(props){
     return(
         <div id={"divStyle"}>

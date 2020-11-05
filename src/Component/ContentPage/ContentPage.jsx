@@ -8,6 +8,12 @@ import {getArticles} from '../NewsCard/Articles.js'
 import {Redirect} from 'react-router-dom';
 import './ContentPage.css'
 
+/*
+    The following component is used by each categories. 
+    It presents the main content of the web application with 
+    a search bar and presenting news card when searching for 
+    a particular keyword 
+*/ 
 
 class ContentPage extends React.Component{
     constructor(props){
@@ -29,7 +35,7 @@ class ContentPage extends React.Component{
     // Update the states when transitioning between pages and removing the newscard if they are present
     componentWillReceiveProps(props){
         this.setState({
-            artictleData : [], 
+            articleData : [], 
             status : "ok", 
             code : "", 
             message : "", 
@@ -42,22 +48,26 @@ class ContentPage extends React.Component{
 
    // Gets new articles from the API and mount the new newscard into the contentStyle div 
    async getCards(){
+       
+        // When the user tries to enter an empty search into the searchbar 
         if(this.state.keyword === ""){
             alert("Please type a keyword in the searchbar")
         }
-
+       
+       
+        // Parse the article data if available. Else, we return a text saying "No Result" 
         else{
-            this.setState({isLoading : true,artictleData : []})
+            this.setState({isLoading : true,articleData : []})
             getArticles(this.state.category,this.state.keyword).then(
                 data => {
-                        this.setState({status : data["status"],artictleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
-                        if(Object.keys(this.state.artictleData).length === 0){
+                        this.setState({status : data["status"],articleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
+                        if(Object.keys(this.state.articleData).length === 0){
                             let noResult = <Typography variant="h3" color={'primary'} component="h3" align="center"> No Result </Typography>
                             ReactDOM.render(noResult, document.getElementById('contentStyle'));
                         }
                 
                         else{
-                            let result = this.state.artictleData.map(
+                            let result = this.state.articleData.map(
                                 (article,key) => {  
                                     let source = article["source"]["name"]
                                     let title = article["title"]
@@ -67,7 +77,7 @@ class ContentPage extends React.Component{
                                     let date = article["publishedAt"]
                                     let content = article["content"]
                                     return(<NewsCard 
-                                            key = {key}
+                                            key={key}
                                             source={source} 
                                             title={title} 
                                             description={description} 
