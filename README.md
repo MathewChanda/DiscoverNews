@@ -44,7 +44,7 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
 #### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
 * Finally, I used this Material-UI Searchbar from a GitHub repo to create the searchbar for our users to search for articles on DiscoverNews 
 
-### Missing Content in the News card 
+## Missing Content in the News card 
 In the response from the News API, some information may not appear for the card such as source of the article and summary. To handle the event of missing content from the News API, the user will see the following messages or events below. 
 * Title of the Article - "Title is unavailable"
 * Picture of the article - [Default Picture](https://github.com/MathewChanda/DiscoverNews/blob/master/src/Component/NewsCard/MissingImage.png, "Default Picture") 
