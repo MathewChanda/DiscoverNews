@@ -61,8 +61,9 @@ class ContentPage extends React.Component{
                 data => {
                         this.setState({status : data["status"],articleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
                         if(Object.keys(this.state.articleData).length === 0){
-                            let noResult = <Typography variant="h3" color={'primary'} component="h3" align="center"> No Result </Typography>
-                            ReactDOM.render(noResult, document.getElementById('contentStyle'));
+                            let noResult = <Typography style={{justifyContent: "center"}} variant="h3" color={'primary'} component="h3" align="center"> No Result </Typography>
+                            ReactDOM.render(<div></div>, document.getElementById('contentStyle'));
+                            ReactDOM.render(noResult, document.getElementById('noResultStyle'));
                         }
                 
                         else{
@@ -86,6 +87,7 @@ class ContentPage extends React.Component{
                                             content={content}
                                         />)
                                 })
+                            ReactDOM.render(<div></div>, document.getElementById('noResultStyle'));
                             ReactDOM.render(result, document.getElementById('contentStyle'));
                         }
                  })
@@ -137,6 +139,8 @@ class ContentPage extends React.Component{
                   {/* NewsCard div */ }
                   <div id={"contentContainer"}>
                     <div id={"contentStyle"}> 
+                    </div>
+                    <div id={"noResultStyle"}> 
                     </div>
                   </div>
             </div>

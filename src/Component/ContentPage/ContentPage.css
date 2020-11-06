@@ -6,6 +6,11 @@
 }
 
 
+#noResultStyle{
+  margin-top: 30px;
+  justify-content: left;
+}
+
 #categoryStyle{
   margin-top: 150px;
   color: white;
