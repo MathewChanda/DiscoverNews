@@ -54,7 +54,7 @@ class ContentPage extends React.Component{
        
         // When the user tries to enter an empty search into the searchbar 
         if(this.state.keyword === ""){
-            alert("Please type a keyword in the searchbar")
+            alert("Please type a keyword in the searchbar!")
         }
        
         // Parse the article data if available. Else, we return a text saying "No Result" 
@@ -146,13 +146,13 @@ class ContentPage extends React.Component{
                     {this.getLoading()}
                 </div>
 
-                  {/* NewsCard div */ }
-                  <div id={"contentContainer"}>
+                {/* NewsCard div */ }
+                <div id={"contentContainer"}>
                     <div id={"contentStyle"}> 
                     </div>
                     <div id={"noResultStyle"}> 
                     </div>
-                  </div>
+                </div>
             </div>
         )
     }
