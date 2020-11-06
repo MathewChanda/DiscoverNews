@@ -33,7 +33,7 @@ const useStyles = makeStyles((theme) => ({
     width: 450,
     margin : 20, 
     height: "100%", 
-    justifyContent: "space-evenly" 
+    justifyContent: "space-around" 
   },
   media: {
     width: "100%",
