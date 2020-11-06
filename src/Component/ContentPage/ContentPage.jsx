@@ -136,8 +136,10 @@ class ContentPage extends React.Component{
                 </div>
 
                   {/* NewsCard div */ }
-                <div id={"contentStyle"}> 
-                </div>
+                  <div id={"contentContainer"}>
+                    <div id={"contentStyle"}> 
+                    </div>
+                  </div>
             </div>
         )
     }

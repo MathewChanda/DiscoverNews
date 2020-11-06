@@ -1,27 +1,29 @@
- #contentStyle{
-    margin-top: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
-  #cardStyle {
-    justify-content: space-around;
-    padding: auto 15px;
-  }
-  
-  #categoryStyle{
+#contentStyle{
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#categoryStyle{
   margin-top: 150px;
   color: white;
   font-weight: bold !important;
-  }
-  
-  #searchBarStyle{
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-  }
-  
-  #loadingStyle{
-    margin-top: 10px;
-  }
+}
+
+#searchBarStyle{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#loadingStyle{
+  margin-top: 10px;
+}
+
+#contentContainer{
+  display: flex;
+  margin: auto;
+  max-width: 90%;
+  justify-content: center;
+  align-items: center;
+}
