@@ -7,13 +7,27 @@ import './ErrorPage.css'
 */ 
 
 function ErrorPage(props){
+
+    let code; 
+    let message; 
+
+    if(props.location.state === undefined){
+        code = "Code cannot be found"
+        message = "Message cannot be found"
+    }
+
+    else{
+        code = props.location.state.code
+        message = props.location.state.message
+    }
+
     return(
         <div id={"divStyle"}>
             <Typography variant="h1" color={'primary'} component="h1" align="center">
-                Error :  {props.location.state.code}
+                Error :  {code}
             </Typography>
             <Typography color={"primary"} variant="h3" component="h3" >
-                Message : {props.location.state.message}
+                Message : {message}
             </Typography>
         </div>
     )

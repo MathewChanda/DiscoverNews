@@ -60,6 +60,14 @@ class ContentPage extends React.Component{
             getArticles(this.state.category,this.state.keyword).then(
                 data => {
                         this.setState({status : data["status"],articleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
+                        console.log(this.state.artictleData)
+
+                        // Redirect to error page when errors occurs 
+                        if(this.state.status === "error"){
+                            return(<Redirect to={{pathname: '/error', state: { code : this.state.code, message: this.state.message }}}/>)
+                        }
+
+                        // Checks if we have any articles or no articles to display and determine what to render in each case 
                         if(Object.keys(this.state.articleData).length === 0){
                             let noResult = <Typography style={{justifyContent: "center"}} variant="h3" color={'primary'} component="h3" align="center"> No Result </Typography>
                             ReactDOM.render(<div></div>, document.getElementById('contentStyle'));

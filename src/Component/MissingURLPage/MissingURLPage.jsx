@@ -13,7 +13,7 @@ function MissingURLPage(props){
                 URL for the article is unavailable! 
             </Typography>
             <Typography color={"primary"} variant="h3" component="h3" align="center">
-                Please select another article by choosing category in the navigation bar! 
+                Please select another article by choosing a category in the navigation bar! 
             </Typography>
         </div>
     )

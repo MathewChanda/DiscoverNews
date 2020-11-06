@@ -15,7 +15,7 @@ function App() {
     <div>
       <Router>
           <Switch>
-
+            
              {/* Redirect users to entertainment*/ }
             <Route exact path="/"> 
               <Redirect to="/entertainment"/>
@@ -45,12 +45,6 @@ function App() {
               <MissingURLPage/>
             </Route>  
 
-            {/*Route for no page found */ }
-            <Route path="*">
-              <Navbar/>
-              <NoPageFound/>
-            </Route>  
-
             {/*Route for error */ }
             <Route path="/error" render={(props) => 
               <div>
@@ -58,6 +52,13 @@ function App() {
                 <ErrorPage {...props}/>
               </div>
             } />
+
+            {/*Route that don't exist  */ }
+            <Route path="*">
+              <Navbar/>
+              <NoPageFound/>
+            </Route>  
+
         </Switch>
       </Router>
     </div>
