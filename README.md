@@ -18,9 +18,9 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
 
 ### Steps to locally viewing DiscoverNews 
 1. Install the proper tools to run React Applications 
-              * [NodeJS](https://nodejs.org/en/ "NodeJS")
-              * [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app "Create a New React App")
-              * [Additional information and troubleshoot about React and its necessary tools](https://reactjs.org/tutorial/tutorial.html)
+* [NodeJS](https://nodejs.org/en/ "NodeJS")
+* [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app "Create a New React App")
+* [Additional information and troubleshoot about React and its necessary tools](https://reactjs.org/tutorial/tutorial.html)
 2. Install the dependencies from local node_modules folder and must be in the same directory or level of the node_modules folder
   ```
  npm install
