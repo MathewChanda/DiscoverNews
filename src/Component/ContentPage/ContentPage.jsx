@@ -43,7 +43,10 @@ class ContentPage extends React.Component{
             keyword : "",
             category: props.category, 
         })
-        ReactDOM.render(null, document.getElementById('contentStyle'));
+
+        // Empty the content and no result div if content is there when going to a different page 
+        ReactDOM.render(<div></div>, document.getElementById('noResultStyle'));
+        ReactDOM.render(<div></div>, document.getElementById('contentStyle'));
     }
 
    // Gets new articles from the API and mount the new newscard into the contentStyle div 
