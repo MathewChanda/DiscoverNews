@@ -29,7 +29,6 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
   ```
  npm run dev
  ```
-
 ## Features of DiscoverNews
 
 <p align="center">
@@ -55,6 +54,8 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
 *  DiscoverNews sends HTTP Requests and recieves HTTP Response from the News API.
 #### [Heroku](https://www.heroku.com/, "Heroku")
 * I deployed DiscoverNews by using a Heroku web dyno.
+#### [Moment.js](https://momentjs.com/ "Moment.js") 
+* I used Moment.js to convert or parse the date of the article to be more readable for the user. 
 #### [Material UI SearchBar](https://github.com/TeamWertarbyte/material-ui-search-bar, "Material-UI Searchbar") 
 * Finally, I used this Material-UI Searchbar from a GitHub repo to create the searchbar for our users to search for articles on DiscoverNews 
 
@@ -81,6 +82,5 @@ In the next iteration of DiscoverNews, I would like to implement many exciting f
 * Bookmarking favorite articles 
 * User history of viewing different articles 
 * Build a cross-platform mobile application with React Native or Flutter 
-
-    
+* Voice to Text in the search bar 
 </p>
