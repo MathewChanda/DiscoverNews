@@ -14,7 +14,7 @@ I would like to attend Capital One Software Engineering Summit to learn more abo
 DiscoverNews is an React app created for the Capital One Software Engineering Summit 2021 that finds articles from three categories (Entertainment, Sports, and     Technology). The web application uses the [News API](https://newsapi.org/ "News API Documentation") to fetch information about the articles.  All of the information about the article is presented to a user in a material-ui card, which provides brief, important information about the article. In addition, each card is able to share the link of the article through Facebook, Twitter, or Email to other users. 
 
 ## How can I see DiscoverNews on the browser or local computer? 
-You can view DiscoverNews in the browser at https://discover-news-mathew.herokuapp.com/ or locally at the port 3000. 
+You can view DiscoverNews in the browser at https://discover-news-mathew.herokuapp.com/ or locally at port 3000!
 
 ### Steps to locally viewing DiscoverNews 
 1. Install the proper tools to run React Applications 
