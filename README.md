@@ -19,7 +19,7 @@ You can view DiscoverNews in the browser at https://discover-news-mathew.herokua
 ### Steps to locally viewing DiscoverNews 
 1. Install the proper tools to run React Applications 
 * [NodeJS](https://nodejs.org/en/ "NodeJS")
-* [Create a New React App](https://reactjs.org/docs/create-a-new-react-app.html#create-react-app "Create a New React App")
+* [Create a New React App](https://github.com/facebook/create-react-app "Create a New React App")
 * [Additional information and troubleshoot about React and its necessary tools](https://reactjs.org/tutorial/tutorial.html)
 2. Install the dependencies from local node_modules folder and must be in the same directory or level of the node_modules folder
   ```
@@ -67,6 +67,10 @@ In the response from the News API, some information may not appear for the card 
 * Content of the article - "Content is unavailable"
 * Date of the article - "Date is unavailable"
 * Missing URL - Redirect the user to https://discover-news-mathew.herokuapp.com/missingurl
+* Sharing a missing URL - Redirect the user to https://discover-news-mathew.herokuapp.com/missingurl
+
+## What the hardest problem did I faced and how I solved it? 
+One of the most diffcult technical problems in this project was placing the newscard in a rows of 3. In order to achieve an row of 3 newscard, I must set the flex basis to 30% of each newscard. 
 
 ## What did I learn from building DiscoverNews?
 Although I had a bit of experience using React, I was not familar with any concepts relating to UI/UX design. Through further research on Google, I stumbled upon Material-UI design docs and Adobe XD. Quickly, I designed the front-end of DiscoverNews in Adobe XD and learned how to place React components in the correct place to build a better user-experience from the design documentation! In addition, I also learned how to deploy an application on Heroku. Finally, I learned how to budget time and energy for DiscoverNews while working a full-time Software Engineering job by planning deadlines to complete key features of DiscoverNews. 
