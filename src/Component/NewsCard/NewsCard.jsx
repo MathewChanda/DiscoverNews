@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: 450,
     margin : 20, 
-    height: "100%"
+    height: "100%", 
+    justifyContent: "space-evenly" 
   },
   media: {
     width: "100%",

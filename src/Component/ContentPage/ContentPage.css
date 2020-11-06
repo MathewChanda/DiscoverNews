@@ -2,6 +2,7 @@
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: left;
 }
 
 #categoryStyle{
@@ -21,9 +22,8 @@
 }
 
 #contentContainer{
-  display: flex;
-  margin: auto;
-  max-width: 90%;
+  width: 90%;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
