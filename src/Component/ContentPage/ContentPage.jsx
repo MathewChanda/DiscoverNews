@@ -54,7 +54,6 @@ class ContentPage extends React.Component{
             alert("Please type a keyword in the searchbar")
         }
        
-       
         // Parse the article data if available. Else, we return a text saying "No Result" 
         else{
             this.setState({isLoading : true,articleData : []})
