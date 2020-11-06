@@ -91,6 +91,48 @@ const StyledMenuItem = withStyles((theme) => ({
   },
 }))(MenuItem);
 
+/* 
+  Open Facebook to allow users to post a facebook post about the article url 
+  and provided error handling to redirect users to the missing url page 
+*/ 
+function facebookShare(url){
+  if(url === "missingurl"){
+    window.open(`/${url}`, "_blank")
+  }
+
+  else{
+    window.open(`https://facebook.com/sharer/sharer.php?u=${url}`, "_blank")
+  }
+}
+
+/* 
+  Open Twitter to allow users to tweet the article url 
+  and provided error handling to redirect users to the missing url page 
+*/ 
+function twitterShare(url){
+  console.log(url)
+  if(url === "missingurl"){
+    window.open(`/${url}`, "_blank")
+  }
+
+  else{
+    window.open(`https://twitter.com/intent/tweet?&text=${url}`, "_blank")
+  }
+}
+
+/*
+   Open email application to allow users to mail article url
+   and provided error handling to redirect users to the missing url page 
+ */ 
+function emailShare(url,title){
+  if(url === "missingurl"){
+    window.open(`/${url}`, "_blank")
+  }
+
+  else{
+    window.open(`mailto:?subject=${title}&body=${url}%20is%20the%20link!`, "_blank")
+  }
+}
 
 export default function NewsCard(props) {
   const classes = useStyles();
@@ -112,8 +154,6 @@ export default function NewsCard(props) {
     setAnchorEl(null);
   };
 
-
-  
   let media = <CardMedia className={classes.media} image={MissingImage} title={props.urlToImage} />
   let title = props.title
   let source = props.source
@@ -155,7 +195,6 @@ export default function NewsCard(props) {
   else{
     date = moment(props.date).format('ll')
   }
-  
 
   return (
     <Card className={classes.root}>
@@ -220,7 +259,7 @@ export default function NewsCard(props) {
             onClose={handleClose}
           >
             {/* Sharing the article on a Facebook post*/ }
-            <StyledMenuItem onClick={()=> window.open(`https://facebook.com/sharer/sharer.php?u=${url}`, "_blank")}>
+            <StyledMenuItem onClick={()=> facebookShare(url)}>
               <ListItemIcon>
                 <FacebookIcon fontSize="small" />
               </ListItemIcon>
@@ -228,7 +267,7 @@ export default function NewsCard(props) {
             </StyledMenuItem>
             
             {/* Sharing the article on a Tweet*/ }
-            <StyledMenuItem onClick={()=> window.open(`https://twitter.com/intent/tweet?&text=${url}`, "_blank")}>
+            <StyledMenuItem onClick={()=> twitterShare(url)}>
               <ListItemIcon>
                 <TwitterIcon fontSize="small" />
               </ListItemIcon>
@@ -236,7 +275,7 @@ export default function NewsCard(props) {
             </StyledMenuItem>
             
             {/* Sharing the article on a Email post*/}
-            <StyledMenuItem onClick={()=> window.open(`mailto:?subject=${title}&body=${url}%20is%20the%20link!`, "_blank")}>
+            <StyledMenuItem onClick={()=> emailShare(url,title)}>
               <ListItemIcon>
                 <EmailIcon fontSize="small" />
               </ListItemIcon>

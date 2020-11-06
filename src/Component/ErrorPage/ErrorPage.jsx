@@ -11,6 +11,8 @@ function ErrorPage(props){
     let code; 
     let message; 
 
+    /* Checks if the prop.location.state is undefined or have codes 
+    and message and what to set code and message for each scenario */ 
     if(props.location.state === undefined){
         code = "Code cannot be found"
         message = "Message cannot be found"

@@ -60,7 +60,6 @@ class ContentPage extends React.Component{
             getArticles(this.state.category,this.state.keyword).then(
                 data => {
                         this.setState({status : data["status"],articleData : data["articles"],code : data["code"],message : data["message"],isLoading : false})
-                        console.log(this.state.artictleData)
 
                         // Redirect to error page when errors occurs 
                         if(this.state.status === "error"){
